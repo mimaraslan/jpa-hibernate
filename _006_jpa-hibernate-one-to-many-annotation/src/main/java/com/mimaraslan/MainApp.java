@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Set;
 
 import org.hibernate.Session;
-
 import com.mimaraslan.model.Customer;
 import com.mimaraslan.model.Orders;
 import com.mimaraslan.util.HibernateUtil;
@@ -13,6 +12,7 @@ import com.mimaraslan.util.HibernateUtil;
 public class MainApp {
 
 	public static void main(String[] args) {
+
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
 			session.beginTransaction();

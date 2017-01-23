@@ -7,7 +7,7 @@ import org.hibernate.service.ServiceRegistry;
 
 public class HibernateUtil {
 
-	private static SessionFactory sessionFactory;
+	private static 	SessionFactory sessionFactory; 
 	private static ServiceRegistry serviceRegistry;
 
 	static {
@@ -23,7 +23,7 @@ public class HibernateUtil {
 	}
 
 	public static SessionFactory getSessionFactory() {
-		return sessionFactory;
+		return sessionFactory = new Configuration().configure().buildSessionFactory();
 	}
 
 	public static void shutdown() {
