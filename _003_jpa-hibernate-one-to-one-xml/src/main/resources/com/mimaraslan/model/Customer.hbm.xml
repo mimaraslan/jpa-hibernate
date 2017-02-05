@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<!-- 
+	@Entity
+	@Table(name = "CUSTOMER")
+ -->
+	<class name="com.mimaraslan.model.Customer" table="CUSTOMER">
+	
+<!-- 
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name = "CUSTOMER_ID", nullable = false)
+	private int customerId;
+ -->
+		<id name="customerId" type="int">
+			<column name="CUSTOMER_ID" />
+			<generator class="identity" />
+		</id>
+
+<!-- 
+	@Column(name = "TITLE", nullable = false, length = 10)
+	private String title;
+ -->	
+		<property name="title" type="string">
+			<column name="TITLE" length="10" not-null="true" />
+		</property>	
+	
+<!-- 
+	@Column(name = "NAME", nullable = false, length = 20)
+	private String name;
+ -->		
+		<property name="name" type="string">
+			<column name="NAME" length="20" not-null="true" />
+		</property>
+
+<!-- 
+	@OneToOne(mappedBy="customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private CustomerDetail customerDetail;
+ -->		
+		<one-to-one name="customerDetail" 
+					class="com.mimaraslan.model.CustomerDetail"
+					cascade="save-update" />		
+	</class>
+</hibernate-mapping>
