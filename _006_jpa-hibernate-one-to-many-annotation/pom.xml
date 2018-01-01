@@ -3,10 +3,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.turkeyjug</groupId>
-	<artifactId>_001_jpa-hibernate-hello-world-xml</artifactId>
+	<artifactId>_006_jpa-hibernate-one-to-many-annotation</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
-	<name>_001_jpa-hibernate-hello-world-xml</name>
+	<name>_006_jpa-hibernate-one-to-many-annotation</name>
 	<url>http://turkeyjug.org</url>
 
 	<dependencies>
