@@ -8,7 +8,7 @@ public class CustomerDetail {
 	private String address;
 	private String tel;
 	private Date creationDate;
-	private Customer customer;//Bagli oldugu tablo foreign
+	private Customer customer;//Bagli oldugu tablo yabanci foreign
 
 	public CustomerDetail() {
 	}
