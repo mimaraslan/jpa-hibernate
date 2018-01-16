@@ -84,8 +84,9 @@ public class MainApp {
 		} catch (Exception e) {
 			System.err.println("Error :" + e);
 			session.getTransaction().rollback();
+		} finally {
+			session.close();
 		}
-		HibernateUtil.shutdown();
 	}
 
 }
