@@ -24,5 +24,4 @@ public class HibernateUtil {
 	public static SessionFactory getSessionFactory() {
 		return new Configuration().configure().buildSessionFactory();
 	}
-
 }
