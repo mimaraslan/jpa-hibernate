@@ -15,7 +15,7 @@ public class MainApp {
 	static Logger log = Logger.getLogger(MainApp.class.getName());
 
 	public static void main(String[] args) {
-		
+
 		// Create 3 products
 		create();
 
@@ -23,15 +23,13 @@ public class MainApp {
 		read();
 
 		// Update second product
-		update();
+		//update();
 
 		// Delete third product
-		delete();
-		
-		// Insert all product records into other_product
-		insert();
+		//delete();
 
-		HibernateUtil.shutdown();
+		// Insert all product records into other_product
+		//insert();
 	}
 
 	public static void create() {
@@ -39,9 +37,9 @@ public class MainApp {
 		Transaction t = null;
 		try {
 			t = session.beginTransaction();
-			Product product1 = new Product("Book", 1, new Float(15.45), false, new Date());
+			Product product1 = new Product("Book", 1, new Float(33.45), false, new Date());
 			Product product2 = new Product("Pencil", 2, new Float(10.00), false, new Date());
-			Product product3 = new Product("Satchel", 1, new Float(100.30), false, new Date());
+			Product product3 = new Product("Eraser", 1, new Float(5.30), false, new Date());
 			session.save(product1);
 			session.save(product2);
 			session.save(product3);
@@ -49,8 +47,9 @@ public class MainApp {
 		} catch (Exception e) {
 			log.error("Error Create :", e);
 			t.rollback();
+		} finally {
+			session.close();
 		}
-		session.close();
 	}
 
 	public static void read() {
@@ -65,8 +64,9 @@ public class MainApp {
 			}
 		} catch (Exception e) {
 			log.error("Error Read :", e);
+		} finally {
+			session.close();
 		}
-		session.close();
 	}
 
 	public static void update() {
@@ -85,8 +85,9 @@ public class MainApp {
 		} catch (Exception e) {
 			log.error("Error Update :", e);
 			t.rollback();
+		} finally {
+			session.close();
 		}
-		session.close();
 	}
 
 	public static void delete() {
@@ -95,17 +96,17 @@ public class MainApp {
 		try {
 			t = session.beginTransaction();
 			Query query = session.createQuery("delete from Product where productName=:productName");
-			query.setParameter("productName", "Satchel");
+			query.setParameter("productName", "Eraser");
 			int result = query.executeUpdate();
 			System.out.println(result + " lines deleted");
 			t.commit();
 		} catch (Exception e) {
 			log.error("Error Delete :", e);
 			t.rollback();
+		} finally {
+			session.close();
 		}
-		session.close();
 	}
-
 
 	public static void insert() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
@@ -120,8 +121,9 @@ public class MainApp {
 		} catch (Exception e) {
 			log.error("Error Insert :", e);
 			t.rollback();
+		} finally {
+			session.close();
 		}
-		session.close();
 	}
 
 }

@@ -9,8 +9,6 @@ import org.hibernate.service.ServiceRegistry;
 public class HibernateUtil {
 
 	static Logger log = Logger.getLogger(HibernateUtil.class.getName());
-	
-	private static SessionFactory sessionFactory;
 	private static ServiceRegistry serviceRegistry;
 
 	static {
@@ -18,18 +16,15 @@ public class HibernateUtil {
 			Configuration configuration = new Configuration();
 			configuration.configure();
 			serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-			sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+			configuration.buildSessionFactory(serviceRegistry);
 		} catch (Throwable ex) {
+			System.err.println("Error creating SessionFactory :" + ex);
 			log.error("Error creating SessionFactory :", ex);
 			throw new ExceptionInInitializerError(ex);
 		}
 	}
 
 	public static SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
-
-	public static void shutdown() {
-		sessionFactory.close();
+		return new Configuration().configure().buildSessionFactory();
 	}
 }
