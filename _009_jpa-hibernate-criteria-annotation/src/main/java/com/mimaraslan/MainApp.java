@@ -48,13 +48,14 @@ public class MainApp {
 			// Get the maximum of salary property.
 			crTot.setProjection(Projections.max("unitPrice"));
 			
-			List maxPrice = crTot.list();
+			List<Product> maxPrice = crTot.list();
 			System.out.println("Max Price: " + maxPrice.get(0));
 
 		} catch (Exception e) {
 			System.err.println("Error creating Customer :" + e);
+		} finally {
+			session.close();
 		}
-		HibernateUtil.shutdown();
 	}
 
 	public static void add() {
@@ -62,10 +63,10 @@ public class MainApp {
 		Transaction t = null;
 		try {
 			t = session.beginTransaction();
-			session.save(new Product("Book", 5, new Float(15.45)));
+			session.save(new Product("Book", 5, new Float(35.45)));
 			session.save(new Product("Pencil", 12, new Float(10.00)));
-			session.save(new Product("Satchel", 3, new Float(100.30)));
-			session.save(new Product("Book2", 6, new Float(16.00)));
+			session.save(new Product("Eraser", 3, new Float(5.30)));
+			session.save(new Product("Book2", 6, new Float(18.00)));
 			session.save(new Product("Book3", 10, new Float(36.00)));
 			t.commit();
 		} catch (Exception e) {
