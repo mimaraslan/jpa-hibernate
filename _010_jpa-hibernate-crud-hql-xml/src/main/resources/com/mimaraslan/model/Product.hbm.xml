@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mimaraslan.model.Product" table="PRODUCT">
+		<id name="productId" type="int">
+			<column name="PRODUCT_ID" />
+			<generator class="identity" />
+		</id>
+		<property name="productName" type="string">
+			<column name="PRODUCT_NAME" length="30" not-null="true"/>
+		</property>
+		<property name="quantity" type="int">
+			<column name="QUANTITY" default="0"/>
+		</property>
+		<property name="unitPrice" type="java.lang.Float">
+			<column name="UNIT_PRICE" precision="10" scale="2" />
+		</property>
+		<property name="discontinued" type="java.lang.Boolean">
+			<column name="DISCONTINUED" sql-type="tinyint" />
+		</property>
+		<property name="modifiedDate" type="date">
+			<column name="MODIFIED_DATE" length="10" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>
