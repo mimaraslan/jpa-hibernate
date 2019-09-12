@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mimaraslan.hibernate</groupId>
-	<artifactId>Hibernate-Hello-World-XML</artifactId>
+	<artifactId>Hibernate-Hello-World-Annotation</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0</version>
-	<name>Hibernate-Hello-World-XML</name>
+	<name>Hibernate-Hello-World-Annotation</name>
 	<url>http://mimaraslan.com</url>
 
 	<dependencies>

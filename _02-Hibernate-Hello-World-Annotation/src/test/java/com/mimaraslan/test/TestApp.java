@@ -2,8 +2,8 @@ package com.mimaraslan.test;
 
 import java.util.Date;
 import org.hibernate.Session;
+import com.keylesson.util.HibernateUtil;
 import com.mimaraslan.persistence.Customer;
-import com.mimaraslan.util.HibernateUtil;
 
 public class TestApp {
 
@@ -12,7 +12,7 @@ public class TestApp {
 		try {
 			session.beginTransaction();
 			Customer customer = new Customer();
-			customer.setName("Mimar");
+			customer.setName("Aslan");
 			customer.setAddress("Türkiye İstanbul");
 			customer.setCreationDate(new Date());
 			session.save(customer);
