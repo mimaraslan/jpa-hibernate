@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mimaraslan.persistence.Customer" table="CUSTOMER">
+		<id name="id" type="int">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+		<property name="name" type="string">
+			<column name="NAME" length="20" not-null="true" />
+		</property>
+		<property name="address" type="string">
+			<column name="ADDRESS" length="50" />
+		</property>
+		<property name="creationDate" type="date">
+			<column name="CREATION_DATE" length="10" />
+		</property>
+	</class>
+</hibernate-mapping>
