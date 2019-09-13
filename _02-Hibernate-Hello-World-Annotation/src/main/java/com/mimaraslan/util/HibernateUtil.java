@@ -1,4 +1,4 @@
-package com.keylesson.util;
+package com.mimaraslan.util;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;

@@ -1,18 +1,18 @@
-package com.mimaraslan.test;
+package com.mimaraslan.app;
 
 import java.util.Date;
 import org.hibernate.Session;
-import com.mimaraslan.persistence.Customer;
 import com.mimaraslan.util.HibernateUtil;
+import com.mimaraslan.persistence.Customer;
 
-public class TestApp {
+public class MainApp {
 
 	public static void main(String[] args) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
 			session.beginTransaction();
 			Customer customer = new Customer();
-			customer.setName("Mimar");
+			customer.setName("Aslan");
 			customer.setAddress("Türkiye İstanbul");
 			customer.setCreationDate(new Date());
 			session.save(customer);

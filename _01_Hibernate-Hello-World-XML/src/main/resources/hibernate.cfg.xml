@@ -4,14 +4,26 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	
+    	<!-- <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> --> <!-- for MySQL 5 -->
+	    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property> <!-- for MySQL 8 -->
 		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dbusiness</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">123456789</property>
 
-		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-		<property name="show_sql">true</property>
-		<property name="hbm2ddl.auto">update</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>             
+   
+        <property name="connection.pool_size">1</property>
+        <property name="current_session_context_class">thread</property>
+        
+        <!-- dbcp connection pool configuration -->
+        <property name="hibernate.dbcp.initialSize">5</property>
+        <property name="hibernate.dbcp.maxTotal">20</property>
+        <property name="hibernate.dbcp.maxIdle">10</property>
+        <property name="hibernate.dbcp.minIdle">5</property>
+        <property name="hibernate.dbcp.maxWaitMillis">-1</property>
 		
 		<mapping resource="com/mimaraslan/persistence/Customer.hbm.xml"></mapping>
 	</session-factory>
