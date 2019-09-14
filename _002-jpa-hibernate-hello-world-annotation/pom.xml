@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.turkeyjug</groupId>
+	<artifactId>JPA-Hibernate-Hello-World-Annotation</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0</version>
+	<name>_002_jpa-hibernate-hello-world-annotation</name>
+	<url>http://turkeyjug.org</url>
+
+	<dependencies>
+
+		<!-- Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.0.0.Alpha2</version>
+			<type>pom</type>
+		</dependency>
+
+		<!-- MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.17</version>
+		</dependency>
+
+	</dependencies>
+</project>
