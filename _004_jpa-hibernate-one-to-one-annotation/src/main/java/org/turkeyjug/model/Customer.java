@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-// 	<class name="com.mimaraslan.persistence.Customer" table="CUSTOMER">
+// 	<class name="org.turkeyjug.model.Customer" table="CUSTOMER">
 @Entity
 @Table(name = "CUSTOMER")
 public class Customer {
@@ -44,7 +44,7 @@ public class Customer {
 	
 /*
  		<one-to-one name="customerDetail" 
-					class="com.mimaraslan.persistence.CustomerDetail"
+					class="org.turkeyjug.model.CustomerDetail"
 					cascade="save-update" />	
  */	
 	@OneToOne(mappedBy="customer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)

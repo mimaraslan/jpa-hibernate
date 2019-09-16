@@ -13,7 +13,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-// 	<class name="com.keylesson.persistence.Orders" table="ORDERS">
+// 	<class name="org.turkeyjug.model.Orders" table="ORDERS">
 @Entity
 @Table(name = "ORDERS")
 public class Orders {
@@ -58,7 +58,7 @@ public class Orders {
 
 	
 /*
- 	<many-to-one name="customer" class="com.keylesson.persistence.Customer"	fetch="select">
+ 	<many-to-one name="customer" class="org.turkeyjug.model.Customer"	fetch="select">
 		<column name="CUSTOMER_ID" not-null="true" />
 	</many-to-one>
  */	

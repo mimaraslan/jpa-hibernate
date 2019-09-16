@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
-// 	<class name="com.keylesson.persistence.Customer" table="CUSTOMER">
+// 	<class name="org.turkeyjug.model.Customer" table="CUSTOMER">
 @Entity
 @Table(name = "CUSTOMER")
 public class Customer {
@@ -55,7 +55,7 @@ public class Customer {
 		<key>
 			<column name="CUSTOMER_ID" not-null="true" />
 		</key>
-		<one-to-many class="com.keylesson.persistence.Orders" />
+		<one-to-many class="org.turkeyjug.model.Orders" />
 	</set>
  */
 	@OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)

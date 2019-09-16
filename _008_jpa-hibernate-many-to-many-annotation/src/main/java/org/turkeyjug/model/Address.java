@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-// 	<class name="com.keylesson.persistence.Address" table="ADDRESS">
+// 	<class name="org.turkeyjug.model.Address" table="ADDRESS">
 @Entity
 @Table(name = "ADDRESS")
 public class Address {
@@ -67,7 +67,7 @@ public class Address {
 		<key>
 			<column name="ADDRESS_ID" not-null="true" />
 		</key>
-		<many-to-many entity-name="com.keylesson.persistence.Customer">
+		<many-to-many entity-name="org.turkeyjug.model.Customer">
 			<column name="CUSTOMER_ID" not-null="true" />
 		</many-to-many>
 	</set>

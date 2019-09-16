@@ -13,7 +13,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
-//	<class name="com.mimaraslan.persistence.CustomerDetail" table="CUSTOMER_DETAIL">
+//	<class name="org.turkeyjug.model.CustomerDetail" table="CUSTOMER_DETAIL">
 @Entity
 @Table(name = "CUSTOMER_DETAIL")
 public class CustomerDetail {
@@ -60,7 +60,7 @@ public class CustomerDetail {
 
 /*
  		<one-to-one name="customer" 
-					class="com.mimaraslan.persistence.Customer"
+					class="org.turkeyjug.model.Customer"
 					constrained="true" />
  */	
 	@OneToOne

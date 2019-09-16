@@ -10,7 +10,7 @@ public class Orders {
 	private Date orderDate;
 	private Customer customer;
 	/*
-	   <many-to-one name="customer" class="com.keylesson.persistence.Customer" fetch="select">
+	   <many-to-one name="customer" class="org.turkeyjug.model.Customer" fetch="select">
 			<column name="CUSTOMER_ID" not-null="true" />
 		</many-to-one>
 	 */

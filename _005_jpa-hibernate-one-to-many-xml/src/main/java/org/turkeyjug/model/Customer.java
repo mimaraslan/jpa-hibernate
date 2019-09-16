@@ -14,7 +14,7 @@ public class Customer {
 			<key>
 				<column name="CUSTOMER_ID" not-null="true" />
 			</key>
-			<one-to-many class="com.keylesson.persistence.Orders" />
+			<one-to-many class="org.turkeyjug.model.Orders" />
 		</set>
 	 */
 
