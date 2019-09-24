@@ -4,8 +4,10 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-	    <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/dbusiness</property>
+		 <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>  <!-- for MySQL 5 -->
+	<!--<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property> --> <!-- for MySQL 8 -->
+		<property name="hibernate.connection.url">jdbc:mysql://hostname:3306/dbusiness?autoReconnect=true;useSSL=false</property>
+		
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">123456789</property>
 

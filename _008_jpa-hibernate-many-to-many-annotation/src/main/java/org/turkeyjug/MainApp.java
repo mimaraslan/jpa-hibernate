@@ -16,6 +16,7 @@ public class MainApp {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		try {
 			session.beginTransaction();
+			
 			// Create 3 addresses
 			Address addr1 = new Address("street1", "city1", "country1","type1");
 			Address addr2 = new Address("street2", "city2", "country2","type2");
