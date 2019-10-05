@@ -3,15 +3,17 @@ package org.turkeyjug;
 import java.util.Date;
 import java.util.List;
 
-import org.apache.log4j.Logger;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.turkeyjug.model.Product;
 import org.turkeyjug.util.HibernateUtil;
 
 public class MainApp {
-	static Logger log = Logger.getLogger(MainApp.class.getName());
+	//static Logger log2 = Logger.getLogger(MainApp.class.getName());
+	private static final Logger log = LoggerFactory.getLogger(MainApp.class);
 
 	public static void main(String[] args) {
 		// Create 3 products

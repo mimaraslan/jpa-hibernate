@@ -1,14 +1,15 @@
 package org.turkeyjug.util;
 
-import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HibernateUtil {
 
-	static Logger log = Logger.getLogger(HibernateUtil.class.getName());
+	private static final Logger log = LoggerFactory.getLogger(HibernateUtil.class);
 	
 	private static SessionFactory sessionFactory;
 	private static ServiceRegistry serviceRegistry;
