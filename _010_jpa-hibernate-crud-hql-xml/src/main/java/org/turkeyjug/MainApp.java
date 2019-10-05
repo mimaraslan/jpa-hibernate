@@ -12,7 +12,7 @@ import org.turkeyjug.model.Product;
 import org.turkeyjug.util.HibernateUtil;
 
 public class MainApp {
-	//static Logger log2 = Logger.getLogger(MainApp.class.getName());
+
 	private static final Logger log = LoggerFactory.getLogger(MainApp.class);
 
 	public static void main(String[] args) {
