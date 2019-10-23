@@ -4,6 +4,7 @@
 *.war
 *.ear
 .mtj.tmp/
+.mvn/wrapper
 hs_err_pid*
 
 ### Package Files ###
@@ -121,4 +122,3 @@ Thumbs.db
 /node_modules
 /dist
 package-lock.json
-*.pdf
