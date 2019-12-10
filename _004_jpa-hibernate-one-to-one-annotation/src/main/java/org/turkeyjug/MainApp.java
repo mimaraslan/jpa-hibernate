@@ -15,7 +15,7 @@ public class MainApp {
 			
 			session.beginTransaction();
 			// Create detail customer
-			CustomerDetail customerDetail = new CustomerDetail("188 RUE MARRAKECH", "+212-5689-33", new Date());
+			CustomerDetail customerDetail = new CustomerDetail("34 KADIKOY ISTANBUL", "+216-123-45-67", new Date());
 			
 			// Create customer
 			Customer customer = new Customer("Mr.", "Aslan");
