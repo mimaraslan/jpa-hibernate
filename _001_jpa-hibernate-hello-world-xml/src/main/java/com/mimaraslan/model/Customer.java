@@ -4,50 +4,60 @@ import java.util.Date;
 
 public class Customer {
 
-	private int id;
-	private String name;
-	private String address;
-	private Date creationDate;
+    private int id;
+    private String firstname;
+    private String lastname;
+    private String address;
+    private Date creationDate;
 
-	public Customer() {
-	}
+    public Customer() {
+    }
 
-	public Customer(int id, String name, String address, Date creationDate) {
-		this.id = id;
-		this.name = name;
-		this.address = address;
-		this.creationDate = creationDate;
-	}
+    public Customer(String firstname, String lastname,  String address, Date creationDate) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.address = address;
+        this.creationDate = creationDate;
+    }
 
-	public int getId() {
-		return id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getFirstname() {
+        return firstname;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public String getLastname() {
+        return lastname;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 
-	public Date getCreationDate() {
-		return creationDate;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public void setCreationDate(Date creationDate) {
-		this.creationDate = creationDate;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
 }
