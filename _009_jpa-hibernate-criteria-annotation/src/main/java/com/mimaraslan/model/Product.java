@@ -11,63 +11,63 @@ import javax.persistence.Table;
 @Table(name = "PRODUCT")
 public class Product {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "PRODUCT_ID", nullable = false)
-	private int productId;
-	
-	@Column(name = "PRODUCT_NAME", length = 30)	
-	private String productName;
-	
-	@Column(name = "QUANTITY")
-	private int quantity;
-	
-	@Column(name = "UNIT_PRICE", precision = 10, scale = 2)
-	private Float unitPrice;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "PRODUCT_ID", nullable = false)
+    private int productId;
 
-	public Product() {
-	}
+    @Column(name = "PRODUCT_NAME", length = 30)
+    private String productName;
 
-	public Product(String productName, int quantity, Float unitPrice) {
-		this.productName = productName;
-		this.quantity = quantity;
-		this.unitPrice = unitPrice;
-	}
+    @Column(name = "QUANTITY")
+    private int quantity;
 
-	public int getProductId() {
-		return productId;
-	}
+    @Column(name = "UNIT_PRICE", precision = 10, scale = 2)
+    private Float unitPrice;
 
-	public void setProductId(int productId) {
-		this.productId = productId;
-	}
+    public Product() {
+    }
 
-	public String getProductName() {
-		return productName;
-	}
+    public Product(String productName, int quantity, Float unitPrice) {
+        this.productName = productName;
+        this.quantity = quantity;
+        this.unitPrice = unitPrice;
+    }
 
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
+    public int getProductId() {
+        return productId;
+    }
 
-	public int getQuantity() {
-		return quantity;
-	}
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
 
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
+    public String getProductName() {
+        return productName;
+    }
 
-	public Float getUnitPrice() {
-		return unitPrice;
-	}
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
 
-	public void setUnitPrice(Float unitPrice) {
-		this.unitPrice = unitPrice;
-	}
+    public int getQuantity() {
+        return quantity;
+    }
 
-	@Override
-	public String toString() {
-		return "Product[" + productName + ", " + quantity + ", " + unitPrice + "]";
-	}
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Float getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(Float unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Product[" + productName + ", " + quantity + ", " + unitPrice + "]";
+    }
 }
