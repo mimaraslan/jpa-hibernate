@@ -4,21 +4,21 @@ import jakarta.persistence.*;  // for Hibarnete 6
 // import javax.persistence.*; // for Hibarnete 5
 
 @Entity
-@Table(name="student")
+@Table(name="STUDENT")
 public class Student {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name="ID")
 	private int id;
 	
-	@Column(name="first_name")
+	@Column(name="FIRST_NAME")
 	private String firstName;
 	
-	@Column(name="last_name")
+	@Column(name="LAST_NAME")
 	private String lastName;
 	
-	@Column(name="email")
+	@Column(name="EMAIL")
 	private String email;
 	
 	public Student() {
@@ -62,11 +62,17 @@ public class Student {
 		this.email = email;
 	}
 
+
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		final StringBuilder sb = new StringBuilder("Student{");
+		sb.append("id=").append(id);
+		sb.append(", firstName='").append(firstName).append('\'');
+		sb.append(", lastName='").append(lastName).append('\'');
+		sb.append(", email='").append(email).append('\'');
+		sb.append('}');
+		return sb.toString();
 	}
-	
 }
 
 
