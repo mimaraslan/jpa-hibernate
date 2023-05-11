@@ -122,3 +122,4 @@ Thumbs.db
 /node_modules
 /dist
 package-lock.json
+desktop.ini
