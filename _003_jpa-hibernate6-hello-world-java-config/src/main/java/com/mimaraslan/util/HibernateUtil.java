@@ -20,19 +20,20 @@ public class HibernateUtil {
                 // Hibernate settings equivalent to hibernate.cfg.xml's properties
                 Properties settings = new Properties();
 
-   /*               settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQL82Dialect");
+                // PostgreSQL
+                settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQL82Dialect");
                 settings.put(Environment.DRIVER, "org.postgresql.Driver");
                 settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/businessDB");
                 settings.put(Environment.USER, "postgres");
                 settings.put(Environment.PASS, "123456789");
-*/
-              // MySQL 8
-            settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
+
+/*             // MySQL 8
+                settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
                 settings.put(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
                 settings.put(Environment.URL, "jdbc:mysql://localhost:3306/businessDB?useSSL=false");
                 settings.put(Environment.USER, "root");
                 settings.put(Environment.PASS, "123456789");
-
+*/
 
                 settings.put(Environment.SHOW_SQL, "true");
                 settings.put(Environment.HBM2DDL_AUTO, "create");
